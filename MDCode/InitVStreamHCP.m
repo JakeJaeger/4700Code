@@ -15,7 +15,7 @@ PhiCutoff = 3 * AtomSpacing * 1.1;
 
 T = 30;
 
-AddHCPAtomicBlob(10, 0, 0, 0, 0, 0, 0, T, 0);
+AddHCPAtomicArray(11, 7, 0, 0, 0, 0, 0, 0, T, 0);
 % vy0 = -sqrt(0.02*Ep/Mass1);
 % AddRectAtomicArray(4,4,0,12*AtomSpacing,0,vy0,0,T,1);
 Ep = 0.5;

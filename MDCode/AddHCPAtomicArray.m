@@ -38,6 +38,11 @@ y(nAtoms + 1:nAtoms + numAtoms) = y(nAtoms + 1:nAtoms + numAtoms) + ...
     (rand(1, numAtoms) - 0.5) * AtomSpacing * InitDist + Y0;
 
 AtomType(nAtoms + 1:nAtoms + numAtoms) = Type;
+for b = (1:WAtoms/2)
+    for a= 0:(LAtoms/2)
+        AtomType(nAtoms+2*b+2*a*WAtoms)=~Type;
+    end
+end
 
 if Temp == 0
     Vx(nAtoms + 1:nAtoms + numAtoms) = 0;
