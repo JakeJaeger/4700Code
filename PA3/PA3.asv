@@ -1,0 +1,19 @@
+xmax=10;
+ymax=10;
+V=zeros(ymax,xmax);
+steps=10000;
+
+%set boundary conditions
+V(:,1)=1;
+
+for i=1:steps
+    Vold=V;
+   for x=2:(xmax-1)
+       
+       for y=1:(ymax-1)
+        V(x,y)= (Vold(y-1,x)+Vold(y+1,x)+Vold(y,x-1)+Vold(y,x+1))/4;
+       end
+   end
+   surf(V)
+   pause(0.01)
+end 
